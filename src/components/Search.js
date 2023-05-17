@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import { Placeholder } from "semantic-ui-react";
+import { Placeholder, Search } from "semantic-ui-react";
 import "./../styles.css";
 
-const Search = ({ onSearch }) => {
+const SearchPlace = ({ onSearch }) => {
   const [location, setLocation] = useState("");
 
   const handleInputChange = (event) => {
@@ -13,18 +13,40 @@ const Search = ({ onSearch }) => {
     event.preventDefault();
     onSearch(location);
   };
+  console.log("funfou");
+
+  const countries = [
+    "Brasil",
+    "Canadá",
+    "Estados Unidos",
+    "França",
+    "Alemanha",
+    "Itália",
+    "Japão",
+    "China",
+    "Índia",
+    "Austrália",
+  ];
+
+  const [filteredCountries, setFilteredCountries] = useState([]);
+
+  const handleSearchChange = (e, { value }) => {
+    const filtered = countries.filter((country) =>
+      country.toLowerCase().includes(value.toLowerCase())
+    );
+    setFilteredCountries(filtered);
+  };
 
   return (
     <form onSubmit={handleSearch}>
-      <input
-        type="text"
-        value={location}
-        onChange={handleInputChange}
-        placeholder="Enter location"
+      <Search
+        onSearchChange={handleSearchChange}
+        results={filteredCountries}
+        placeholder="Pesquisar país..."
       />
       <button type="submit">Search</button>
     </form>
   );
 };
 
-export default Search;
+export default SearchPlace;

@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
 import { Dimmer, Loader } from "semantic-ui-react";
 import Search from "./components/Search";
+import Navbar from "./components/Navbar";
 
 export default function App() {
   const [lat, setLat] = useState([]);
@@ -34,6 +35,10 @@ export default function App() {
 
   return (
     <div className="App">
+      <div>
+        <Navbar />
+        {/* App content */}
+      </div>
       <Search onSearch={handleSearch} />
 
       {typeof data.main != "undefined" ? (
