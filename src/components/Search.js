@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Placeholder, Search } from "semantic-ui-react";
-import "./../styles.css";
+// import "./../styles.css";
 
 const SearchPlace = ({ onSearch }) => {
   const [location, setLocation] = useState("");
@@ -16,23 +16,23 @@ const SearchPlace = ({ onSearch }) => {
   console.log("funfou");
 
   const countries = [
-    "Brasil",
-    "Canadá",
-    "Estados Unidos",
-    "França",
-    "Alemanha",
-    "Itália",
-    "Japão",
-    "China",
-    "Índia",
-    "Austrália",
+    { title: "Brasil" },
+    { title: "Canadá" },
+    { title: "Estados Unidos" },
+    { title: "França" },
+    { title: "Alemanha" },
+    { title: "Itália" },
+    { title: "Japão" },
+    { title: "China" },
+    { title: "Índia" },
+    { title: "Austrália" },
   ];
 
   const [filteredCountries, setFilteredCountries] = useState([]);
 
   const handleSearchChange = (e, { value }) => {
     const filtered = countries.filter((country) =>
-      country.toLowerCase().includes(value.toLowerCase())
+      country.title.toLowerCase().includes(value.toLowerCase())
     );
     setFilteredCountries(filtered);
   };
