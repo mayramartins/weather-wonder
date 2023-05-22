@@ -9,11 +9,11 @@ export default function App() {
 
   const styles = {
     container: {
-      display: 'flex',
-      justifyContent: 'center',
-      alignItems: 'center',
-      flexDirection: 'column',
-      height: '100vh', // 100% of the viewport height
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      flexDirection: "column",
+      height: "100vh", // 100% of the viewport height
     },
   };
 
@@ -33,7 +33,10 @@ export default function App() {
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition(function (position) {
-      setCoord({ lat: position.coords.latitude, lng: position.coords.longitude});
+      setCoord({
+        lat: position.coords.latitude,
+        lng: position.coords.longitude,
+      });
     });
   }, []);
 
