@@ -1,51 +1,34 @@
 import React, { useState } from "react";
-import { Placeholder, Search } from "semantic-ui-react";
-// import "./../styles.css";
+import { Search } from "semantic-ui-react";
 
-const SearchPlace = ({ onSearch }) => {
-  const [location, setLocation] = useState("");
+const SearchPlace = ({ onSelectSearch }) => {
 
-  const handleInputChange = (event) => {
-    setLocation(event.target.value);
+  const handleResultSelect = (e, { result }) => {
+    onSelectSearch(result.value);
   };
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    onSearch(location);
-  };
-  console.log("funfou");
-
-  const countries = [
-    { title: "Brasil" },
-    { title: "Canadá" },
-    { title: "Estados Unidos" },
-    { title: "França" },
-    { title: "Alemanha" },
-    { title: "Itália" },
-    { title: "Japão" },
-    { title: "China" },
-    { title: "Índia" },
-    { title: "Austrália" },
-  ];
 
   const [filteredCountries, setFilteredCountries] = useState([]);
 
-  const handleSearchChange = (e, { value }) => {
-    const filtered = countries.filter((country) =>
-      country.title.toLowerCase().includes(value.toLowerCase())
+  const handleSearchChange = async (event, { value }) => {
+    if(value.toLowerCase().length < 2) return;
+
+    const response = await fetch(
+      `https://api.opencagedata.com/geocode/v1/json?q=${value.toLowerCase()}&limit=5&key=a6df332073a14d9aacbb5d9ba9cb796f`,
     );
+    const data = await response.json();
+    const filtered = data.results.map(({ formatted, geometry}) => {
+      return { title: formatted, value: geometry, id: formatted }; 
+    });
     setFilteredCountries(filtered);
   };
 
   return (
-    <form onSubmit={handleSearch}>
-      <Search
-        onSearchChange={handleSearchChange}
-        results={filteredCountries}
-        placeholder="Pesquisar país..."
-      />
-      <button type="submit">Search</button>
-    </form>
+    <Search
+      onResultSelect={handleResultSelect}
+      onSearchChange={handleSearchChange}
+      results={filteredCountries}
+      placeholder="Search city..."
+    />
   );
 };
 

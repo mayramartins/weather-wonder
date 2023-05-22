@@ -1,55 +1,46 @@
 // import "./App.css";
 import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
-import { Dimmer, Loader } from "semantic-ui-react";
 import Search from "./components/Search";
-import Navbar from "./components/Navbar";
 
 export default function App() {
-  const [lat, setLat] = useState([]);
-  const [long, setLong] = useState([]);
-  const [data, setData] = useState([]);
+  const [coord, setCoord] = useState({});
+  const [data, setData] = useState({});
+
+  const styles = {
+    container: {
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+      flexDirection: 'column',
+      height: '100vh', // 100% of the viewport height
+    },
+  };
 
   useEffect(() => {
     const fetchData = async () => {
-      navigator.geolocation.getCurrentPosition(function (position) {
-        setLat(position.coords.latitude);
-        setLong(position.coords.longitude);
-      });
-
+      if (!coord.lat || !coord.lng) return;
       await fetch(
-        `${process.env.REACT_APP_API_URL}/weather/?lat=${lat}&lon=${long}&units=metric&APPID=${process.env.REACT_APP_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/weather/?lat=${coord.lat}&lon=${coord.lng}&units=metric&APPID=5f6903a78bc4cac4fb5772cd878d0e3d`
       )
         .then((res) => res.json())
         .then((result) => {
-          console.log(result);
           setData(result);
         });
     };
     fetchData();
-  }, [lat, long]);
+  }, [coord]);
 
-  const handleSearch = (location) => {
-    console.log("Search location", location);
-  };
+  useEffect(() => {
+    navigator.geolocation.getCurrentPosition(function (position) {
+      setCoord({ lat: position.coords.latitude, lng: position.coords.longitude});
+    });
+  }, []);
 
   return (
-    <div className="App">
-      <div>
-        <Navbar />
-        {/* App content */}
-      </div>
-      <Search onSearch={handleSearch} />
-
-      {typeof data.main != "undefined" ? (
-        <Weather weatherData={data} />
-      ) : (
-        <div>
-          <Dimmer active>
-            <Loader>Loading..</Loader>
-          </Dimmer>
-        </div>
-      )}
+    <div style={styles.container}>
+      <Search onSelectSearch={setCoord} />
+      <Weather weatherData={data} />
     </div>
   );
 }
