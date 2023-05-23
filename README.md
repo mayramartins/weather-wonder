@@ -1,71 +1,79 @@
-# Getting Started with Create React App
+<!-- <div id="top"></div> -->
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<!-- PROJECT LOGO -->
+<br />
+  <h1 align="center">Weather Wonder</h1>
 
-## Available Scripts
+  <p align="center">
+    Weather Wonder is a comprehensive weather application that brings the wonder of weather forecasting to your fingertips. 
+    <br>
+  </p>
 
-In the project directory, you can run:
+<!-- TABLE OF CONTENTS -->
+<details>
+  <summary>Table of Contents</summary>
+  <ol>
+    <li><a href="#about-the-project">About The Project</a>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#built-with">Built With</a></li>
+    <li><a href="#icebox">Ice Box</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#acknowledgments">Acknowledgments</a></li>
+  </ol>
+</details>
 
-### `npm start`
+<!-- CONTENT -->
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## About the Project
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Weather Wonder is a user-friendly app where the user can stay updated on current weather conditions of any location of the world. The app provides real-time weather data from realiable source, ensuring accuracy and reliability in every forecast. Whether you want to know the temperature, humidity, wind speed, or precipitation chances, Weather Wonder has got you covered.
 
-### `npm test`
+Users can:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Search for weather information of any location worldwide
+- Search faster with an interactive searchbar
+- Find location, date, temperature, humidity, sunrise and sunset currently infos.
 
-### `npm run build`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Getting Started
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Weather Wonder App](https:/)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+[Trello Board](https://trello.com/b/Z6Rb3Z4n/sei-project-3-weather-wonder)
 
-### `npm run eject`
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Built With
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- [Javascript]
+- [React]
+- [CSS3]
+- [OpenWeather] (https://openweathermap.org/)
+- [OpenCage](https://opencagedata.com/api)
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Icebox Items
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. Add profile button and display profile infos
+2. Like/Save post
+3. Search for posts/people on hummingBird
+4. Edit/Delete a post
+5. Notifications feature
+6. Share post
 
-## Learn More
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Contact
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/mayra-martins-8a4b89195/)](https://www.linkedin.com/in/mayra-martins-8a4b89195/) Mayra Martins - mayramartins.in@gmail.com
 
-### Code Splitting
+<p align="right">(<a href="#top">back to top</a>)</p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## Acknowledgments
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# weather-wonder
+- Daniel Scott - SEI Lead Instructor
+- Troy Swayzee - SEI Lead Instructor
+- Iris Toland - SEI Instructional Assistant
+- Megan Barber - SEI Instructional Assistant
+<p align="right">(<a href="#top">back to top</a>)</p>

@@ -52,6 +52,7 @@ export default function App() {
     <div>
       <Navbar />
       <div style={styles.container}>
+        <h1>Weather Wonder </h1>
         <Search onSelectSearch={setCoord} />
         <Weather weatherData={data} />
       </div>
