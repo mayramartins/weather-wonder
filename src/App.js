@@ -2,6 +2,8 @@
 import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
 import Search from "./components/Search";
+import Navbar from "./components/Navbar";
+import backgroundImage from "./weather.jpg";
 
 export default function App() {
   const [coord, setCoord] = useState({});
@@ -14,6 +16,9 @@ export default function App() {
       alignItems: "center",
       flexDirection: "column",
       height: "100vh", // 100% of the viewport height
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: "cover",
+      backgroundPosition: "center",
     },
   };
 
@@ -42,6 +47,7 @@ export default function App() {
 
   return (
     <div style={styles.container}>
+      <Navbar />
       <Search onSelectSearch={setCoord} />
       <Weather weatherData={data} />
     </div>

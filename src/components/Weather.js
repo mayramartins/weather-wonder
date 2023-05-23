@@ -5,7 +5,7 @@ import moment from "moment";
 const WeatherCard = ({ weatherData }) => (
   <Card>
     <Card.Content>
-      {weatherData.name &&
+      {weatherData.name && (
         <>
           <div className="top">
             <p className="header">{weatherData.name}</p>
@@ -18,7 +18,7 @@ const WeatherCard = ({ weatherData }) => (
           </div>
 
           <div className="flex">
-            <p className="temp">Temprature: {weatherData.main.temp} &deg;C</p>
+            <p className="temp">Temperature: {weatherData.main.temp} &deg;C</p>
             <p className="temp">Humidity: {weatherData.main.humidity} %</p>
           </div>
 
@@ -37,12 +37,12 @@ const WeatherCard = ({ weatherData }) => (
             </p>
           </div>
         </>
-      }
-      {!weatherData.name &&
+      )}
+      {!weatherData.name && (
         <div>
           <p>No results</p>
         </div>
-      }
+      )}
     </Card.Content>
   </Card>
 );
