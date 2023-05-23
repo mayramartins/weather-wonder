@@ -1,9 +1,8 @@
-// import "./App.css";
 import React, { useEffect, useState } from "react";
 import Weather from "./components/Weather";
 import Search from "./components/Search";
 import Navbar from "./components/Navbar";
-import backgroundImage from "./weather.jpg";
+import backgroundImage from "./weather2.jpg";
 
 export default function App() {
   const [coord, setCoord] = useState({});
