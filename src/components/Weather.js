@@ -1,6 +1,7 @@
 import React from "react";
 import { Card } from "semantic-ui-react";
 import moment from "moment";
+import WeatherIcon from "react-icons-weather";
 
 const WeatherCard = ({ weatherData }) => (
   <Card>
@@ -20,6 +21,15 @@ const WeatherCard = ({ weatherData }) => (
           <div className="flex">
             <p className="temp">Temperature: {weatherData.main.temp} &deg;C</p>
             <p className="temp">Humidity: {weatherData.main.humidity} %</p>
+            <p className="temp">
+              Weather:{" "}
+              {
+                <WeatherIcon
+                  name="owm"
+                  iconId={weatherData.weather[0].id.toString()}
+                />
+              }{" "}
+            </p>
           </div>
 
           <div className="flex">

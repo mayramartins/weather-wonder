@@ -33,6 +33,7 @@ export default function App() {
       )
         .then((res) => res.json())
         .then((result) => {
+          console.log(result);
           setData(result);
         });
     };
@@ -56,6 +57,7 @@ export default function App() {
         <Search onSelectSearch={setCoord} />
         <Weather weatherData={data} />
       </div>
+      {/* {page == "about" && <About></About>} */}
     </div>
   );
 }
