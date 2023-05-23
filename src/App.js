@@ -20,6 +20,10 @@ export default function App() {
       backgroundSize: "cover",
       backgroundPosition: "center",
     },
+    header: {
+      paddingTop: "20px",
+      paddingBottom: "20px",
+    },
   };
 
   useEffect(() => {
@@ -46,10 +50,12 @@ export default function App() {
   }, []);
 
   return (
-    <div style={styles.container}>
+    <div>
       <Navbar />
-      <Search onSelectSearch={setCoord} />
-      <Weather weatherData={data} />
+      <div style={styles.container}>
+        <Search onSelectSearch={setCoord} />
+        <Weather weatherData={data} />
+      </div>
     </div>
   );
 }
