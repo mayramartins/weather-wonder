@@ -12,7 +12,7 @@ const SearchPlace = ({ onSelectSearch }) => {
     if (value.toLowerCase().length < 2) return;
 
     const response = await fetch(
-      `https://api.opencagedata.com/geocode/v1/json?q=${value.toLowerCase()}&limit=5&key=a6df332073a14d9aacbb5d9ba9cb796f`
+      `https://api.opencagedata.com/geocode/v1/json?q=${value.toLowerCase()}&limit=5&key=da23ef3cfb8b440fb03dcff72260af98`
     );
     const data = await response.json();
     const filtered = data.results.map(({ formatted, geometry }) => {
