@@ -13,7 +13,7 @@
 
 ## About the Project
 
-Weather Wonder is a user-friendly app where the user can stay updated on current weather conditions of any location of the world. The app provides real-time weather data from realiable source, ensuring accuracy and reliability in every forecast. Whether you want to know the temperature, humidity, wind speed, or precipitation chances, Weather Wonder has got you covered.
+Weather Wonder is a user-friendly app where the user can stay updated on current weather conditions of any location of the world. The app provides real-time weather data from realiable API source, ensuring accuracy and reliability in every forecast. Whether you want to know the temperature, humidity, wind speed, or precipitation chances, Weather Wonder has got you covered.
 
 Users can:
 
