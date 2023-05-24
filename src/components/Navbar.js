@@ -6,20 +6,14 @@ const Navbar = ({ setPage }) => {
     <nav className="navbar">
       <ul>
         <li>
-          <a
-            href="#"
-            onClick={() => setPage("home")}
-            style={{ cursor: "pointer" }}
-          >
+          {/* eslint-disable jsx-a11y/anchor-is-valid */}
+          <a onClick={() => setPage("home")} style={{ cursor: "pointer" }}>
             Home
           </a>
         </li>
         <li>
-          <a
-            href="#"
-            onClick={() => setPage("about")}
-            style={{ cursor: "pointer" }}
-          >
+          {/* eslint-disable jsx-a11y/anchor-is-valid */}
+          <a onClick={() => setPage("about")} style={{ cursor: "pointer" }}>
             About
           </a>
         </li>
