@@ -10,10 +10,6 @@ export default function App() {
   const [coord, setCoord] = useState({});
   const [data, setData] = useState({});
 
-  const handleAboutClick = () => {
-    setPage("about");
-  };
-
   const styles = {
     container: {
       display: "flex",
@@ -57,18 +53,17 @@ export default function App() {
 
   return (
     <div>
-      <Navbar />
-
-      {page === "about" && <About />}
-
+      <Navbar setPage={setPage} />
       <div style={styles.container}>
         <h1>Weather Wonder </h1>
-        <Search onSelectSearch={setCoord} />
-        <Weather weatherData={data} />
+        {page === "about" && <About />}
+        {page === "home" && (
+          <>
+            <Search onSelectSearch={setCoord} />
+            <Weather weatherData={data} />
+          </>
+        )}
       </div>
-      {page === "home" && (
-        <button onClick={handleAboutClick}>Go to About Page</button>
-      )}
     </div>
   );
 }

@@ -1,11 +1,16 @@
 import React from "react";
 
 const About = () => {
-  console.log("Abouut Page is rendering");
   return (
-    <div>
-      <h2>About Page</h2>
-      <p>This is the about page.</p>
+    <div style={{ textAlign: "center" }}>
+      <p>Weather Wonder 2023</p>
+      <p>
+        Created with ❤️ by{" "}
+        <a href="https://github.com/mayramartins?tab=repositories">
+          Mayra Martins{" "}
+        </a>
+        to my grandmother Imaculada Maria Pinto
+      </p>
     </div>
   );
 };

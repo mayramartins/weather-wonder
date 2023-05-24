@@ -38,9 +38,15 @@ Users can:
 
 ## Getting Started
 
-[Weather Wonder App](https:/)
+[Weather Wonder App](https://weather-wonder.netlify.app/)
 
 [Trello Board](https://trello.com/b/Z6Rb3Z4n/sei-project-3-weather-wonder)
+
+![weather-wonder](/public/weather-wonder.jpeg)
+
+![weather-wonder](/public/weather-wonder1.jpeg)
+
+![weather-wonder](/public/weather-wonder2.jpeg)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -49,18 +55,16 @@ Users can:
 - [Javascript]
 - [React]
 - [CSS3]
-- [OpenWeather] (https://openweathermap.org/)
-- [OpenCage](https://opencagedata.com/api)
+- [OpenWeather](https://openweathermap.org/)
+- [OpenCage](https://opencagedata.com/)
+- UI Semantic External Library
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Icebox Items
 
-1. Add profile button and display profile infos
-2. Like/Save post
-3. Search for posts/people on hummingBird
-4. Edit/Delete a post
-5. Notifications feature
-6. Share post
+1. Change background image based on searched location's weather
+2. Change background image based on location
+3. See Air Quality information
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
