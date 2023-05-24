@@ -3,10 +3,16 @@ import Weather from "./components/Weather";
 import Search from "./components/Search";
 import Navbar from "./components/Navbar";
 import backgroundImage from "./weather2.jpg";
+import About from "./components/About";
 
 export default function App() {
+  const [page, setPage] = useState("home");
   const [coord, setCoord] = useState({});
   const [data, setData] = useState({});
+
+  const handleAboutClick = () => {
+    setPage("about");
+  };
 
   const styles = {
     container: {
@@ -52,12 +58,17 @@ export default function App() {
   return (
     <div>
       <Navbar />
+
+      {page === "about" && <About />}
+
       <div style={styles.container}>
         <h1>Weather Wonder </h1>
         <Search onSelectSearch={setCoord} />
         <Weather weatherData={data} />
       </div>
-      {/* {page == "about" && <About></About>} */}
+      {page === "home" && (
+        <button onClick={handleAboutClick}>Go to About Page</button>
+      )}
     </div>
   );
 }
